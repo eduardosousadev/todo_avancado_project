@@ -1,0 +1,216 @@
+/* Geral */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #333;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background-image: url('../img/bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+button {
+    background-color: #fdfdfd;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+
+button:hover {
+    background-color: #102f5e;
+    color: #fff;
+}
+
+/* Esse :hover afetará o i apenas*/
+button:hover > i {
+    color: #fff;
+}
+
+button i {
+    color: #102f5e;
+    font-weight: bold;
+
+    /* Deshabilitando os eventos de click */
+    pointer-events: none;
+}
+
+input, select {
+    padding: .25rem .5rem;
+    font-size: 12px;
+}
+
+.hide {
+    display: none;
+}
+
+.overflow {
+    overflow-y: scroll;
+    max-height: 155px;
+}
+
+/* Todo header */
+.todo-container {
+    /* max-width: 450px; */
+    max-width: 300px;
+    margin: 3rem auto;
+    background-color: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Todo Form */
+#todo-form, 
+#edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+#todo-form p,
+#edit-form p {
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+#todo-form .form-control,
+#edit-form .form-control {
+    display: flex;
+    column-gap: .3rem;
+}
+
+#edit-form #cancel-edit-btn {
+    margin-top: 1rem;
+    color: #444;
+}
+
+/* Todo toolbar */
+.todo-container #toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+.todo-container #toolbar h4 {
+    margin-bottom: .5rem;
+}
+
+.todo-container #toolbar #search {
+    border-right: 1px solid #ddd;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-container #toolbar #search form {
+    display: flex;
+    column-gap: .3rem;
+}
+
+.todo-container #toolbar #search input {
+    width: 100%;
+}
+
+.todo-container #toolbar #filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-container #toolbar #filter #filter-select {
+    flex: 1;
+    /* font-size: 10px; */
+}
+
+/* Todo List */
+.todo-container #todo-list .todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: .3s;
+}
+
+.todo-container #todo-list .todo h3 {
+    /* Flex:1 ocupa toda a largura possível e deixa o espaço para os botôes */
+    flex: 1;
+    font-size: .9rem;
+}
+
+.todo-container #todo-list .todo button {
+    margin-left: .4rem;
+}
+
+.done {
+    background-color: #395169;
+}
+
+.done h3 {
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto 10px;
+    text-align: center;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer p a {
+    text-transform: uppercase;
+    color: #aaa;
+    text-decoration: none;
+    transition: .5s;
+}
+
+footer p a:hover {
+    color: #fff;
+}
+
+@media(min-width: 370px) {
+    .todo-container {
+        max-width: 360px;
+    }
+}
+
+@media(min-width: 420px) {
+    .todo-container {
+        max-width: 410px;
+    }
+}
+
+@media(min-width: 760px) {
+    .todo-container {
+        max-width: 450px;
+    }
+}
